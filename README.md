@@ -17,42 +17,49 @@ Comecei minha jornada realizando consultas a uma API pública que fornece dados 
 ```python
 def consulta_api(uf, tipo_interessado):
     # ... (implementação detalhada no código)
-Passo 2: Análises Exploratórias
 ```
+
+## Passo 2: Análises Exploratórias
 
 Explorando os dados, identifiquei os três status mais frequentes das solicitações e suas respectivas frequências. Além disso, criei uma nova variável para extrair o ano do status, permitindo análises temporais.
 
-python
-Copy code
 # Código para análises exploratórias
+
+```python
 top_status = df['status'].value_counts().head(3)
 df['ano_status'] = df['data_status'].str.slice(0, 4)
 freq_ano_status = df['ano_status'].value_counts()
-Passo 3: Consultas Específicas
+```
+
+## Passo 3: Consultas Específicas
 
 Realizei consultas específicas, como contar o número de solicitações arquivadas por decurso de prazo para o estado de Minas Gerais.
 
-python
-Copy code
 # Código para contar solicitações arquivadas para Minas Gerais
+
+```python
 num_solic_arquivadas_minas = df_minas_gerais[df_minas_gerais['status'] == 'Arquivado por decurso de prazo'].shape[0]
-Passo 4: Salvando Resultados
+```
+
+## Passo 4: Salvando Resultados
 
 Finalmente, salvei os resultados em arquivos CSV para compartilhar e revisitar as análises posteriormente.
 
-python
-Copy code
 # Código para salvar os dados em arquivo CSV
+
+```python
 df_bahia_estado.to_csv('solicitacoes_bahia_estado.csv', index=False)
-Conclusão
+```
+
+## Conclusão
 
 Esta jornada proporcionou uma compreensão mais profunda da interação entre Python, APIs e Pandas. A flexibilidade e poder dessas ferramentas oferecem inúmeras possibilidades para explorar e entender conjuntos de dados complexos.
 
-Encorajo todos a explorar dados públicos, aplicar análises exploratórias e contribuir para a comunidade de ciência de dados. O código completo e os detalhes estão disponíveis no meu repositório do GitHub [link para o repositório].
+Encorajo todos a explorar dados públicos, aplicar análises exploratórias e contribuir para a comunidade de ciência de dados. O código completo e os detalhes estão disponíveis no meu repositório do GitHub.
 
 Espero que este artigo tenha sido informativo e inspirador para aqueles que desejam embarcar em jornadas semelhantes. Estou ansioso para receber feedback e sugestões da comunidade.
 
 Obrigado pela leitura!
 
 Atenciosamente,
-[Seu Nome]
+Leandro Amadeu Lima Dias
