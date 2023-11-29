@@ -14,7 +14,8 @@ Comecei minha jornada realizando consultas a uma API pública que fornece dados 
 
 # Código da função
 
-```pythondef consulta_api(uf, tipo_interessado):
+```python
+def consulta_api(uf, tipo_interessado):
     # ... (implementação detalhada no código)
 Passo 2: Análises Exploratórias
 ```
